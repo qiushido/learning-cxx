@@ -5,7 +5,20 @@
 struct Fibonacci {
     int numbers[11];
     // TODO: 修改方法签名和实现，使测试通过
-    int get(int i) {
+    const int get(int i) const{
+        if (i < 0) {
+            return 0;
+        }
+        if (i < 2) {
+            return numbers[i];
+        }
+        int a = numbers[0], b = numbers[1], result = 0;
+        for (int j = 2; j <= i; ++j) {
+            result = a + b;
+            a = b;
+            b = result;
+        }
+        return result;
     }
 };
 
