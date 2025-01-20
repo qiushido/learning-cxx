@@ -12,7 +12,6 @@ int main(int argc, char **argv) {
     ASSERT(vec.size() == 100, "Make this assertion pass.");
     // NOTICE: 平台相关！注意 CI:Ubuntu 上的值。
     std::cout << "sizeof(std::vector<bool>) = " << sizeof(std::vector<bool>) << std::endl;
-    printf("%d", sizeof(vec));
     ASSERT(sizeof(vec) == 40, "Fill in the correct value.");
     {
         vec[20] = false;
